@@ -1,4 +1,4 @@
-from config import BOT_TOKEN
+from config import BOT_TOKEN, BOT_NAME
 
 import discord
 import asyncio
@@ -15,7 +15,7 @@ async def on_ready():
 
 @client.event
 async def on_message(message):
-    print(message.author)
+    print(client.)
     if message.content == '.cmds' or message.content == '.help':
         commands = '``` List of Commands: [] - required'
         commands += '\n    .add [word]  THIS IS AN ADMIN ONLY COMMAND'
@@ -35,7 +35,7 @@ async def on_message(message):
 
     elif message.content == '.words':
         await BannedWords.showWords(client, message)
-    elif str(message.author) != 'BadWordBot#4130':
+    elif str(message.author) != BOT_NAME:
         await BannedWords.containsBanned(client, message)
 
 client.run(BOT_TOKEN)
