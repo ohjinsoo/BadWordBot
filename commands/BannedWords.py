@@ -63,9 +63,7 @@ async def showWords(client, message):
 async def containsBanned(client, message):
   for k, v in bannedWords.items():
     if k in message.content:
-      user = message.author.nick
-      if user == None:
-        user = message.author.name
+      user = str(message.author)
 
       if users.get(user) == None:
         users[user] = 1
