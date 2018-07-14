@@ -18,7 +18,7 @@ async def add(client, message):
 
 async def delete(client, message):
   admin = await isAdmin(client, message)
-  if not isAdmin:
+  if not admin:
     return
 
   word = message.content[5:]
