@@ -15,7 +15,6 @@ async def on_ready():
 
 @client.event
 async def on_message(message):
-    print(client.)
     if message.content == '.cmds' or message.content == '.help':
         commands = '``` List of Commands: [] - required'
         commands += '\n    .add [word]  THIS IS AN ADMIN ONLY COMMAND'
